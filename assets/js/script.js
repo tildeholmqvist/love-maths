@@ -11,15 +11,25 @@ document.addEventListener("DOMContentLoaded", function () {
                 let gameType = this.getAttribute("data-type");
                 runGame(gameType);
             }
-        });
+        })
     }
+
+    docuement.getElementById("answer-box").addEventListener("keydown", function(event){ 
+        if (event.key==="Enter"){
+           checkAnswer();
+        }
+    })
     runGame("addition");
-});
+})
 /**
  * The main game Loop is called when the script is first loaded
  * and after the users answers has been processed 
  */
 function runGame(gameType) {
+
+    document.getElementById("answer-box"). value= "";
+    document.getElementById("answer-box").focus();
+
     // Creates two random numbers from 1 to 25
     let num1 = Math.floor(Math.random() * 25) + 1;
     let num2 = Math.floor(Math.random() * 25) + 1;
