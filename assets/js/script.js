@@ -14,9 +14,14 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-
+/**
+ * The main game Loop is called when the script is first loaded
+ * and after the users answers has been processed 
+ */
 function runGame() {
-
+    // Creates two random numbers from 1 to 25
+let num1 = Math.floor(Math.random() * 25) + 1;
+let num2 = Math.floor(Math.random() * 25) + 1;
 }
 
 function checkAnswer() {
